@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+header {
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+
+    h1 {
+        font: bold 40px/1 "Fredoka One";
+        letter-spacing: 2px;
+        margin-right: 25vw;
+        a{
+            color: #4D648D;
+            transition: .5s;
+        }
+    }
+    h1 a:hover {
+        color: #819dce;
+    }
+
+    #dcb {
+        display: flex;
+
+        li {
+            margin: 0px 80px;
+
+            a {
+                font:bold 16px/1 "Fredoka On";
+                color: #4D648D;
+                letter-spacing: 1px;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 0%;
+                    height: 3px;
+                    background: #819dce;
+                    margin-top: 8px;
+                    transition: 1s;
+                }
+            }
+            a:hover {
+                color: #819dce;
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+    figure {
+        
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 1;
+
+            .logobox {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50px;
+                height: 50px;
+                padding: 10vw;
+                background: #fff;
+                border-radius: 180px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+                transition: 1s;
+                
+                img{
+                    position: absolute;
+                    top: 45px;
+                    left: 65px;
+                    width: 25vh;
+                    opacity: 0.2;
+                }
+
+                p {
+                    font: 25px/1 "Fredoka One";
+                    color: #4d648db8;
+                    position: absolute;
+                    top: 110%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: 1s;
+                }
+            }
+            .logobox:hover {
+                background-color: #4d648d41;
+                img {
+                    filter: invert(1);
+                    opacity: 1;
+                }
+                p {
+                    opacity: 1;
+                }
+            }
+        
+
+    }
+
+    footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        font: 12px/1 "arial";
+        color: #fff;
+        background: #4D648D;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 3vh 5vw;
+        z-index: 2; 
+    }
+
